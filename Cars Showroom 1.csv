@@ -1,0 +1,6 @@
+Brand,Model,Item Condition,Price,Year of Production,Mileage,Engine capacity,Amount,Is Reserved
+Fiat,Uno,NEW,40000.0,2020,180.0,1.6,3,false
+Mercedes,W213,NEW,20000.0,2005,180000.0,2.6,1,false
+Toyota,Supra,NEW,30000.0,2000,65000.0,4.2,1,true
+Ford,Focus,NEW,3000.0,2000,365000.0,1.4,1,false
+Opel,Corsa,NEW,900.0,1995,155000.0,1.2,1,false

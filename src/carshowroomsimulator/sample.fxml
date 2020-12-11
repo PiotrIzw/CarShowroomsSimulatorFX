@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="5" prefHeight="459.0" prefWidth="711.0" vgap="5" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="carshowroomsimulator.Controller">
+   <columnConstraints>
+      <ColumnConstraints maxWidth="340.60002441406255" minWidth="147.80002136230473" prefWidth="148.60000915527348" />
+      <ColumnConstraints maxWidth="544.5999786376954" minWidth="351.79997558593755" prefWidth="543.7999908447266" />
+      <ColumnConstraints />
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Label text="Choose showroom:" />
+      <ComboBox fx:id="cityComboBox" onAction="#handleCityComboBox" prefWidth="150.0" GridPane.rowIndex="1" GridPane.valignment="TOP" />
+      <Label text="Available cars:" GridPane.columnIndex="1" GridPane.columnSpan="3" />
+      <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCarBooking" prefHeight="26.0" prefWidth="539.0" text="Book selected car" GridPane.rowIndex="6" />
+      <TableView fx:id="carsTableView" onMouseClicked="#handleMouseClickOnTable" onMouseMoved="#handleMouseHoverOnTable" prefHeight="346.0" prefWidth="490.0" GridPane.columnIndex="1" GridPane.columnSpan="3" GridPane.rowIndex="1" GridPane.rowSpan="5">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+         <tooltip>
+            <Tooltip fx:id="tableTooltip" text="Empty Tooltip" />
+         </tooltip>
+      </TableView>
+      <Button fx:id="buyCarButton" maxWidth="556.0" mnemonicParsing="false" onAction="#handleBuyCar" prefHeight="26.0" prefWidth="304.0" text="Buy selected car" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+      <Label text="Search car:" GridPane.rowIndex="3" GridPane.valignment="TOP" />
+      <TextField fx:id="searchTextField" onKeyTyped="#handleSearchCar" GridPane.rowIndex="4" GridPane.valignment="TOP" />
+      <Button fx:id="shoppingCartButton" mnemonicParsing="false" onAction="#handleShoppingCart" prefHeight="26.0" prefWidth="164.0" text="Shopping cart" GridPane.rowIndex="5" GridPane.valignment="TOP" />
+      <Button mnemonicParsing="false" onAction="#handleAddingToShoppingCart" prefHeight="26.0" prefWidth="407.0" text="Add to shopping cart" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+      <Button mnemonicParsing="false" onAction="#handleSavingShowroomToCSV" prefHeight="26.0" prefWidth="401.0" text="Save data to CSV" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+      <Button mnemonicParsing="false" onAction="#handleLoadingDataToShowroom" prefHeight="26.0" prefWidth="161.0" text="Load data to Showroom" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+      <Button mnemonicParsing="false" onAction="#handleExit" prefHeight="26.0" prefWidth="254.0" text="Exit" GridPane.rowIndex="8" />
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</GridPane>
